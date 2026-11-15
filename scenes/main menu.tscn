@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bm8ex6df2e8fl"]
+
+[ext_resource type="Script" uid="uid://iexye3ow4khi" path="res://scenes/main_menu.gd" id="1_12vek"]
+[ext_resource type="Texture2D" uid="uid://brolhex3pbm0c" path="res://assets/Pixel Adventure 1/Free/Background/Blue.png" id="1_xsilq"]
+[ext_resource type="Texture2D" uid="uid://68kc176cc17r" path="res://Cool Text - NINJA JUMPER 519130626605247.png" id="2_12vek"]
+
+[node name="MainMenu" type="Node" unique_id=1867998252]
+script = ExtResource("1_12vek")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1571125657]
+texture_filter = 1
+offset_right = 1147.0
+offset_bottom = 644.0
+texture = ExtResource("1_xsilq")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=606033685]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -449.5
+offset_top = -52.0
+offset_right = 449.5
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_12vek")
+
+[node name="Button" type="Button" parent="." unique_id=1927891871]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -143.0
+offset_top = -259.0
+offset_right = 185.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
